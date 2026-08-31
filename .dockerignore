@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.vscode/
+*.log
+*.zip
+db/honeypot.db
+*.db

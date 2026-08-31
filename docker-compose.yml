@@ -1,0 +1,94 @@
+services:
+  fake-ssh:
+    build: .
+    command: python3 -m services.fake_ssh
+    ports:
+      - "2223:2223"
+    volumes:
+      - honeypot_db:/app/data
+      - honeypot_logs:/app/logs
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  fake-http:
+    build: .
+    command: python3 -m services.fake_http
+    ports:
+      - "8080:8080"
+    volumes:
+      - honeypot_db:/app/data
+      - honeypot_logs:/app/logs
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  fake-ftp:
+    build: .
+    command: python3 -m services.fake_ftp
+    ports:
+      - "2121:2121"
+    volumes:
+      - honeypot_db:/app/data
+      - honeypot_logs:/app/logs
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    # Uncomment if packet capture is needed:
+    # cap_add:
+    #   - NET_RAW
+    #   - NET_ADMIN
+
+  fake-telnet:
+    build: .
+    command: python3 -m services.fake_telnet
+    ports:
+      - "2323:2323"
+    volumes:
+      - honeypot_db:/app/data
+      - honeypot_logs:/app/logs
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  fake-db:
+    build: .
+    command: python3 -m services.fake_db
+    ports:
+      - "3307:3307"
+    volumes:
+      - honeypot_db:/app/data
+      - honeypot_logs:/app/logs
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  dashboard:
+    build: .
+    command: python3 -m dashboard.app
+    ports:
+      - "9000:9000"
+    volumes:
+      - honeypot_db:/app/data
+      - honeypot_logs:/app/logs
+    restart: unless-stopped
+    depends_on:
+      - fake-ssh
+      - fake-http
+      - fake-ftp
+      - fake-telnet
+      - fake-db
+
+volumes:
+  honeypot_db:
+  honeypot_logs:

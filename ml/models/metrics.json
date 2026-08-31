@@ -1,0 +1,327 @@
+{
+  "feature_columns": [
+    "event_count",
+    "auth_attempts",
+    "unique_usernames",
+    "unique_passwords",
+    "command_count",
+    "duration_seconds",
+    "avg_seconds_between",
+    "recent_session_count_from_ip",
+    "username_entropy",
+    "password_entropy",
+    "repeated_password_ratio",
+    "unique_payloads",
+    "avg_payload_length",
+    "commands_per_minute",
+    "is_ssh",
+    "is_http",
+    "is_ftp",
+    "is_telnet",
+    "is_mysql"
+  ],
+  "labels": [
+    "Brute Force",
+    "Credential Stuffing",
+    "Exploit Attempt",
+    "Malware Download",
+    "Recon Scan",
+    "Unknown Behaviour",
+    "Web Enumeration"
+  ],
+  "active_model": "random_forest",
+  "decision_tree": {
+    "accuracy": 0.9785714285714285,
+    "confusion_matrix": [
+      [
+        80,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        80,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        77,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        79,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        78,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        80,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        5,
+        0,
+        74
+      ]
+    ],
+    "feature_importances": {
+      "event_count": 0.03931051211525996,
+      "auth_attempts": 0.011416344460759845,
+      "unique_usernames": 0.19297397948474493,
+      "unique_passwords": 0.01112309858686336,
+      "command_count": 0.10158980905304203,
+      "duration_seconds": 0.005445599652965672,
+      "avg_seconds_between": 0.001538584468725078,
+      "recent_session_count_from_ip": 0.0,
+      "username_entropy": 0.0,
+      "password_entropy": 0.16729653572414535,
+      "repeated_password_ratio": 0.0,
+      "unique_payloads": 0.003032249710000134,
+      "avg_payload_length": 0.2971803161718186,
+      "commands_per_minute": 0.1436597389896758,
+      "is_ssh": 0.0,
+      "is_http": 0.010435669746639314,
+      "is_ftp": 0.000522801674137954,
+      "is_telnet": 0.0,
+      "is_mysql": 0.014474760161221895
+    },
+    "classification_report": {
+      "Brute Force": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 80.0
+      },
+      "Credential Stuffing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 80.0
+      },
+      "Exploit Attempt": {
+        "precision": 1.0,
+        "recall": 0.9625,
+        "f1-score": 0.9808917197452229,
+        "support": 80.0
+      },
+      "Malware Download": {
+        "precision": 0.9404761904761905,
+        "recall": 0.9875,
+        "f1-score": 0.9634146341463414,
+        "support": 80.0
+      },
+      "Recon Scan": {
+        "precision": 0.9397590361445783,
+        "recall": 0.975,
+        "f1-score": 0.9570552147239264,
+        "support": 80.0
+      },
+      "Unknown Behaviour": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 80.0
+      },
+      "Web Enumeration": {
+        "precision": 0.9736842105263158,
+        "recall": 0.925,
+        "f1-score": 0.9487179487179487,
+        "support": 80.0
+      },
+      "accuracy": 0.9785714285714285,
+      "macro avg": {
+        "precision": 0.9791313481638693,
+        "recall": 0.9785714285714285,
+        "f1-score": 0.9785827881904915,
+        "support": 560.0
+      },
+      "weighted avg": {
+        "precision": 0.9791313481638692,
+        "recall": 0.9785714285714285,
+        "f1-score": 0.9785827881904914,
+        "support": 560.0
+      }
+    }
+  },
+  "random_forest": {
+    "accuracy": 0.9946428571428572,
+    "confusion_matrix": [
+      [
+        80,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        80,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        79,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        80,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        79,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        80,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        79
+      ]
+    ],
+    "feature_importances": {
+      "event_count": 0.06390083998473726,
+      "auth_attempts": 0.04306706808389217,
+      "unique_usernames": 0.08164809177628488,
+      "unique_passwords": 0.0417700644602931,
+      "command_count": 0.07648571968518875,
+      "duration_seconds": 0.028333762368080436,
+      "avg_seconds_between": 0.03520984155775434,
+      "recent_session_count_from_ip": 0.013566962293780755,
+      "username_entropy": 0.10750333055590557,
+      "password_entropy": 0.09793753621660094,
+      "repeated_password_ratio": 0.03432206047368235,
+      "unique_payloads": 0.05917825613957121,
+      "avg_payload_length": 0.16008038144454204,
+      "commands_per_minute": 0.11671008473707487,
+      "is_ssh": 0.0015887884444050506,
+      "is_http": 0.020386409980200082,
+      "is_ftp": 0.0058646436307489384,
+      "is_telnet": 0.002153372647911002,
+      "is_mysql": 0.010292785519346339
+    },
+    "classification_report": {
+      "Brute Force": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 80.0
+      },
+      "Credential Stuffing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 80.0
+      },
+      "Exploit Attempt": {
+        "precision": 1.0,
+        "recall": 0.9875,
+        "f1-score": 0.9937106918238994,
+        "support": 80.0
+      },
+      "Malware Download": {
+        "precision": 0.975609756097561,
+        "recall": 1.0,
+        "f1-score": 0.9876543209876543,
+        "support": 80.0
+      },
+      "Recon Scan": {
+        "precision": 0.9875,
+        "recall": 0.9875,
+        "f1-score": 0.9875,
+        "support": 80.0
+      },
+      "Unknown Behaviour": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 80.0
+      },
+      "Web Enumeration": {
+        "precision": 1.0,
+        "recall": 0.9875,
+        "f1-score": 0.9937106918238994,
+        "support": 80.0
+      },
+      "accuracy": 0.9946428571428572,
+      "macro avg": {
+        "precision": 0.9947299651567943,
+        "recall": 0.994642857142857,
+        "f1-score": 0.994653672090779,
+        "support": 560.0
+      },
+      "weighted avg": {
+        "precision": 0.9947299651567943,
+        "recall": 0.9946428571428572,
+        "f1-score": 0.994653672090779,
+        "support": 560.0
+      }
+    }
+  },
+  "training_samples": 2240,
+  "test_samples": 560
+}
