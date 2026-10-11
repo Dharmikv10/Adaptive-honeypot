@@ -1,0 +1,37 @@
+{
+    "model": "UNSW Stage 2 Attack XGBoost",
+    "stage": 2,
+    "num_classes": 9,
+    "classes": [
+        "Analysis",
+        "Backdoor",
+        "DoS",
+        "Exploits",
+        "Fuzzers",
+        "Generic",
+        "Reconnaissance",
+        "Shellcode",
+        "Worms"
+    ],
+    "dropped_columns": [
+        "attack_cat",
+        "label",
+        "stcpb",
+        "dtcpb"
+    ],
+    "num_features": 194,
+    "n_estimators": 400,
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "validation_accuracy": 0.8169592358288994,
+    "validation_macro_f1": 0.6231271938569425,
+    "validation_weighted_f1": 0.7955875695004849,
+    "test_accuracy": 0.7972734492190947,
+    "test_macro_f1": 0.5308517735714394,
+    "test_weighted_f1": 0.7881060409390205,
+    "training_samples": 95472,
+    "validation_samples": 23869,
+    "testing_samples": 45332
+}

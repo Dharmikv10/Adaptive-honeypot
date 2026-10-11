@@ -1,0 +1,10 @@
+,Predicted_Analysis,Predicted_Backdoor,Predicted_DoS,Predicted_Exploits,Predicted_Fuzzers,Predicted_Generic,Predicted_Reconnaissance,Predicted_Shellcode,Predicted_Worms
+Actual_Analysis,28,64,27,558,0,0,0,0,0
+Actual_Backdoor,28,61,26,461,3,0,0,4,0
+Actual_DoS,237,578,476,2681,44,9,24,39,1
+Actual_Exploits,263,548,129,9814,109,20,171,74,4
+Actual_Fuzzers,82,121,65,1305,4262,8,8,211,0
+Actual_Generic,0,4,49,423,29,18345,0,17,4
+Actual_Reconnaissance,27,73,13,504,11,1,2835,32,0
+Actual_Shellcode,0,0,3,47,22,2,1,302,1
+Actual_Worms,0,0,0,20,2,2,0,1,19

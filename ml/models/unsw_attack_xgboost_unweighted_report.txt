@@ -1,0 +1,36 @@
+VALIDATION RESULTS
+==================
+                precision    recall  f1-score   support
+
+      Analysis     0.7750    0.2325    0.3577       400
+      Backdoor     0.8113    0.1232    0.2139       349
+           DoS     0.4016    0.1423    0.2101      2453
+      Exploits     0.6359    0.9145    0.7502      6679
+       Fuzzers     0.9679    0.8966    0.9309      3637
+       Generic     0.9975    0.9839    0.9906      8000
+Reconnaissance     0.9269    0.7550    0.8322      2098
+     Shellcode     0.7531    0.7930    0.7725       227
+         Worms     0.7857    0.4231    0.5500        26
+
+      accuracy                         0.8170     23869
+     macro avg     0.7839    0.5849    0.6231     23869
+  weighted avg     0.8154    0.8170    0.7956     23869
+
+
+OFFICIAL TEST RESULTS
+=====================
+                precision    recall  f1-score   support
+
+      Analysis     0.0421    0.0414    0.0417       677
+      Backdoor     0.0421    0.1046    0.0600       583
+           DoS     0.6041    0.1164    0.1952      4089
+      Exploits     0.6206    0.8816    0.7284     11132
+       Fuzzers     0.9509    0.7031    0.8084      6062
+       Generic     0.9977    0.9721    0.9848     18871
+Reconnaissance     0.9329    0.8109    0.8676      3496
+     Shellcode     0.4441    0.7989    0.5709       378
+         Worms     0.6552    0.4318    0.5205        44
+
+      accuracy                         0.7973     45332
+     macro avg     0.5877    0.5401    0.5309     45332
+  weighted avg     0.8268    0.7973    0.7881     45332

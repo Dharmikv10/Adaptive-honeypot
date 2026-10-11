@@ -40,3 +40,5 @@ docker-compose.override.yml
 
 services/fake_ssh_host_key
 git rm --cached services/fake_ssh_host_key
+ml/data/unsw/
+ml/data/*.csv
